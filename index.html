@@ -1469,11 +1469,13 @@
                 region: "eu1",
                 portalId: "27152192",
                 formId: "23f0d2ff-4dd6-4798-8ab7-b68367a96769",
+                onFormSubmit: function($form) {
                     window.addEventListener('message', event => {
                     if(event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormSubmit') {
                     var clientId = ga.getAll()[0].get('clientId'); 
                     $('input[name="google_client_id"]').val(clientId).change();
                     }})
+                }
                 });
                  </script>
           
