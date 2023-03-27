@@ -30,6 +30,15 @@
 
     <!--====== App ======-->
     <link rel="stylesheet" href="css/app.css">
+    
+    <script>
+    window.addEventListener('message', event => {
+    if(event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormReady') {
+    var clientId = ga.getAll()[0].get('clientId'); 
+    $('input[name="google_client_id"]').val(clientId).change();
+    }
+    });    
+    </script>
 </head>
 <body class="config">
     <div class="preloader is-active">
