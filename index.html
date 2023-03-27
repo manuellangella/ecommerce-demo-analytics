@@ -1467,7 +1467,10 @@
               hbspt.forms.create({
               region: "eu1",
               portalId: "27152192",
-              formId: "23f0d2ff-4dd6-4798-8ab7-b68367a96769"
+              formId: "23f0d2ff-4dd6-4798-8ab7-b68367a96769",
+              onFormSubmit: function($form) {
+                $('input[name="insert_field_name"]').val('insert_value').change();
+                }
               });
             </script>
           
