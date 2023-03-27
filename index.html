@@ -1463,17 +1463,22 @@
             <div class="u-s-p-y-60">
                 
                 <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
+                
                 <script>
-                  hbspt.forms.create({
-                    region: "eu1",
-                    portalId: "27152192",
+                hbspt.forms.create({
+                region: "eu1",
+                portalId: "27152192",
+                formId: "23f0d2ff-4dd6-4798-8ab7-b68367a96769",
+                onFormSubmit: function($form) {
                     window.addEventListener('message', event => {
                     if(event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormSubmit') {
                     var clientId = ga.getAll()[0].get('clientId'); 
                     $('input[name="google_client_id"]').val(clientId).change();
                     }});
+                    }
                     });
-                </script>
+                });
+                 </script>
                 
                 <div>
                 {% module "module_16799527349153" path="/google_client_id", label="google_client_id" %}
